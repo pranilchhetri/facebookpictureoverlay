@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Sample Uploader Page</title>
+</head>
+
+<body>
+
+	<h2>Facebook Tagger</h2>
+
+	<!-- Enctype MUST be multipart/form-data for file upload -->
+	<form action="uploader.php" method="post" enctype="multipart/form-data">
+    
+    	<!-- For ease-of-use sake I like to put error messages on the same page as uploads -->
+        <!-- Alternatively, you can code your website to display errors wherever you like -->
+    	<?php @print( $fbtOutput ); ?>
+    
+    	Please upload your picture (JPEG or JPG format):<br />
+    	<input type="file" name="picture_upload" />
+        
+        <br /><br />
+        <input type="submit" name="submit" value="Tag me!" />
+    
+    </form>
+	
+	<br /><hr />
+    <i>For help and further explanations, see the <a href="http://shanechism.com/code/static/16">documentation</a>.</i>
+
+</body>
+
+</html>

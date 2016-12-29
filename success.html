@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Congratulations, you're tagged! (Sample Uploader Success Page)</title>
+</head>
+
+<body>
+
+    <h2>Tagging Success!</h2>
+
+    <div style="margin: 0px auto; text-align: center;">
+        
+        <b>Here's your freshly tagged image:</b><br /><br />
+        To save, right click the image and select "Save Image As," "Save Link As," or "Save Picture As." Then, save it to your desktop!<br /><br />
+        
+        <!-- As we saw in uploader.php, $image is the path to the image beginning at the resources directory. -->
+        <!-- In order to show our image I will need to create the first part of the link. In this case it just starts at the domain name. -->
+        <img src="<?php echo( 'http://' . $_SERVER['SERVER_NAME'] . '/facebookpp/' . $image ); ?>" alt="Facebook Picture" /><br /><br />
+        
+        <!-- $_SERVER['PHP_SELF'] is a PHP Superglobal basically pointing the link back to this PHP page -->
+        Why not <a href="<?php echo( $_SERVER['PHP_SELF'] ); ?>">tag another</a>?
+    
+    </div>
+    
+    <br /><hr />
+    <i>For help and further explanations, see the <a href="http://shanechism.com/code/static/16">documentation</a>.</i>
+
+</body>
+
+</html>
